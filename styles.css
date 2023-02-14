@@ -1,0 +1,175 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+    overflow-x: hidden;
+}
+
+.content{
+    display: flex;
+}
+
+/* Left Side */
+
+.left-side{
+    background-image: url("./images/bg-main-desktop.png");
+    background-repeat: 0;
+    background-size: cover;
+    height: 100vh;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: 600px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-left{
+    gap: 40px;
+    height: 245px;
+    width: 80%;
+}
+
+.card-right{
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    height: 245px;
+    width: 80%;
+}
+
+.card-front, .card-back{
+    height:245px;
+    min-height: 30%;
+    min-width: 30%;
+    width:447px;
+    background-repeat: 0;
+    background-position: center;
+}
+
+.card-front{
+    background-image: url("./images/bg-card-front.png");
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-back{
+    background-image: url("./images/bg-card-back.png");
+}
+
+#number-output{
+    letter-spacing: 5px;
+    margin-top: 150px;
+    font-size: 1.75rem;
+}
+
+.name-date{
+    gap: 220px;
+    font-size: 1rem;
+    margin-top: 10px;
+    display: flex;
+}
+
+
+/* Right Side */
+.right-side{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 5;
+    align-items: center;
+    margin-top: 150px;
+    flex-grow: 3;
+    width: 60vw;
+}
+
+.input-text{
+    padding: 20px;
+    width: 90%;
+    font-size: 2rem;
+}
+
+#cvv-output{
+    color: white;
+    margin-left: 360px;
+    margin-top: 108px;
+}
+.attribution{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.input-form{
+    width: 40vw;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    margin-left: 20px;
+}
+input, button{
+    display:block;
+    padding: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    width: 80%;
+    border-radius: 20px;
+}
+
+label {
+    font-size: 1.8rem;
+}
+
+/* Mobile View */
+@media screen and (max-width: 1550px) {
+    .content{
+        flex-flow: column;
+        align-items: center;
+    }
+
+    input, button{
+        width: 80vw;
+    }
+    .left-side{
+        width: 100vw;
+        height: 30vh;
+    }
+
+    .card-left, .card-right{
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-container{
+        flex-flow: row;
+        height: 100%;
+    }
+    .right-side{
+        margin-top: 0px;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .left-side{
+        height: 50vh;
+    }
+    .card-container{
+        flex-flow: column;
+    }
+
+}

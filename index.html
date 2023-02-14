@@ -3,49 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Interactive card details form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+  <div class="content">
 
-  000
+    <div class=left-side>
+      <div class="card-container">
+        <div class="card-left">
+          <div class="card-front">
+            <div id="number-output">
+              0000 0000 0000 0000
+            </div>
+            <div class="name-date">
+              <div id="name-output">Your Name</div>
+              <div id="date-output">01/23</div>
+            </div>
+          </div>
+        </div>
 
-  Cardholder Name
-  e.g. Jane Appleseed
+        <div class="card-right">
+          <div class="card-back">
+            <div id="cvv-output">000</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+    <div class="right-side">
+      <div class="input-text">This is not a real online service! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, commodi!
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+        <br>Sign up now to get started.</br>
+        
+        </div>
+      
+      <div class="input-form">
+        <form action="example.com/path" method="post">
+          <div>
+            <label for="name-input">Cardholder Name</label>
+            <input type="text" id="name-input" name="name" required>  
+          </div>
+          
+          <div>
+            <label for="number-input">Card Number</label>
+            <input type="number" id="number-input" name="number" placeholder="0000 0000 0000 0000" required>
+          </div>
+          
+          <div class="date-cvc">
+            <label for="date-input">Exp.</label>
+            <input type="month" id="date-input" name="date" required>
 
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+            <label for="cvc-input">CVC</label>
+            <input type="number" id="cvc-input" name="cvc" placeholder="e.g. 123" required>
+          </div>
+          
+          <button type="submit">Confirm</button>
+        </form>
+      </div>
+    </div>
   </div>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Nabawi Arifin</a>.
+  </footer>
 </body>
 </html>
